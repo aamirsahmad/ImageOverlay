@@ -1,0 +1,29 @@
+
+body {
+
+	background-color: #f7f8f9;
+	font-family: 'Roboto';
+
+}
+
+p {
+	font-size: 25px;
+}
+
+
+
+.mainImageContainer {
+	border: 5px;
+	border-style: solid;
+	position: relative;
+	width: 800px;
+	height: 600px;
+}
+
+.overlay {
+ 	position: absolute;
+ 	max-height: 600px;
+ 	max-width: 100%;
+ 	top: 0;
+	opacity: 0.6;
+}
