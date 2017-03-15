@@ -11,19 +11,14 @@ p {
 }
 
 
-
 .mainImageContainer {
 	border: 5px;
 	border-style: solid;
 	position: relative;
 	width: 800px;
 	height: 600px;
+	background-image: url("goat.jpg");
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
 }
 
-.overlay {
- 	position: absolute;
- 	max-height: 600px;
- 	max-width: 100%;
- 	top: 0;
-	opacity: 0.6;
-}

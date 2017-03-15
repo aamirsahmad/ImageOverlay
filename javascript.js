@@ -1,44 +1,65 @@
 
 
-var title = document.getElementById("imgOverlayTitle");
-var lightsOverlay = document.getElementById("overlay");
-var sepiaOverlay = document.getElementById("sepiaOverlay");
-var bwButton = document.getElementById("bwButton");
-var removeButton = document.getElementById("remove");
+var image = document.getElementById("mainImageContainer"); //Reference to the image
+var imageWidth;
+var imageHeight;
+var xInitial,yInitial;
+var imageTopInitial, imageLeftInitial;
 
-function remove(){
-	lightsOverlay.style.visibility = 'hidden';
-	sepiaOverlay.style.visibility = 'hidden';
-	bwButton.style.visibility = 'hidden';
-}
+var enableDrag = false;
 
-function lights(){
-	showHide(lightsOverlay);
-}
 
-function sepia(){
-	showHide(sepiaOverlay);
-}
-
-function bw(){
-	showHide(bwButton);
-}
-
-function changeTitle(){
+window.onload = function() {
 	
-	change(title, "CHANGED");
+	//Initialize starting attributes of picture (Should be done in CSS?)
+
+	image.style.backgroundPositionX = '0px';
+	image.style.backgroundPositionY = '0px';
+
+	document.onmousedown = mouseDownEvent;
+	document.onmousemove = mouseMoveEvent;
+	document.onmouseup = mouseReleaseEvent;
+
 }
 
+//Determine what happens when the mouse clicked
+function mouseDownEvent(e){
+	//console.log("Mouse down");
 
+	//Store initial mouse location 
+	yInitial = e.clientY;
+	xInitial = e.clientX;
+	//Store initial image location
+	imageTopInitial = parseInt(image.style.backgroundPositionY);
+	imageLeftInitial = parseInt(image.style.backgroundPositionX);
 
-function changeText(title, text){
-	title.innerHTML = text;
+	enableDrag = true;
+
+	return false; //Add this because otherwise browser wont let you drag
 }
 
-function showHide(img){
-	if(img.style.visibility == 'visible'){
-		img.style.visibility = 'hidden';
+//Determine what happens when the mouse is moving
+function mouseMoveEvent(e){
+	
+	if(enableDrag){
+		
+		var deltaY = e.clientY - yInitial;//Calculate the change in y coordinates
+		var deltaX = e.clientX - xInitial;//Calculate the change in x coordinates
+		image.style.backgroundPositionY = imageTopInitial + deltaY  + 'px';
+		image.style.backgroundPositionX = imageLeftInitial + deltaX  + 'px';
+
 	}else{
-		img.style.visibility = 'visible';
+		
 	}
+	return false;
 }
+
+//Determine what happens when the mouse button is released
+function mouseReleaseEvent(e){
+	//console.log("Mouse released")
+	enableDrag = false;
+	return false;
+}
+
+
+//console.log('X:' + e.clientX + ' Y:' + e.clientY + ' TOP:' + parseInt(image.style.top));
