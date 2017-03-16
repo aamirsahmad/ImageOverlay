@@ -4,6 +4,7 @@
 function createCanvas(){
 
 	var mainImage = document.getElementById("mainImageContainer");
+	var saveLink = document.getElementById("saveLink");
 	var canvas = document.getElementById("cnv");
 	var context = canvas.getContext('2d');
 
@@ -20,8 +21,6 @@ function createCanvas(){
 	mainImageY = parseInt(style.getPropertyValue("background-position-y"));
 	mainImageX = parseInt(style.getPropertyValue("background-position-x"));
 
-	console.log(mainImageY);
-
 	goat = new Image();
 	goat.src = src;
 	canvas.width = 800;
@@ -34,6 +33,11 @@ function createCanvas(){
 	context.drawImage(goat,mainImageX,mainImageY,goat.width, goat.height);
 	context.drawImage(lassondeLogo,-50, canvas.height - 346);
 
+	var img = new Image();
+	img.setAttribute('crossOrigin', 'anonymous');
+
+
+	localStorage.setItem(canvas, canvas.toDataURL());
 }	
 
 

@@ -7,7 +7,7 @@ body {
 }
 
 p {
-	font-size: 25px;
+	font-size: 25px;647 111 2223
 }
 
 canvas {
@@ -26,11 +26,12 @@ canvas {
 	position: relative;
 	width: 800px;
 	height: 600px;
-	/*background-image: url("goat.jpg");*/
+	background-image: url("img.jpg");
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	float: left;
 }
+
 
 
 .buttonContainer {
@@ -38,8 +39,8 @@ canvas {
 	border: 1px;
 	border-style: solid;
 	display: flex;
-	position: relative;
-
+	position: absolute;
+	
 }
 
 .button {
