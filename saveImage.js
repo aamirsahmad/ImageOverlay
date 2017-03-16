@@ -33,11 +33,9 @@ function createCanvas(){
 	context.drawImage(goat,mainImageX,mainImageY,goat.width, goat.height);
 	context.drawImage(lassondeLogo,-50, canvas.height - 346);
 
-	var img = new Image();
-	img.setAttribute('crossOrigin', 'anonymous');
-
-
-	localStorage.setItem(canvas, canvas.toDataURL());
+	
+	var dt = canvas.toDataURL('image/png');
+    this.href = dt;
 }	
 
 
