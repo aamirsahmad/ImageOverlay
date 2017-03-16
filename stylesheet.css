@@ -10,8 +10,13 @@ p {
 	font-size: 25px;
 }
 
+canvas {
+	border: 5px;
+	border-style: solid;
+	position: relative;
+}
 
-.mainImageContainer {
+.imageContainer {
 	border: 5px;
 	border-style: solid;
 	position: relative;
@@ -20,5 +25,14 @@ p {
 	background-image: url("goat.jpg");
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
+}
+
+
+
+#overlayImage {
+	position: absolute;
+	left: -50px;
+	bottom: -50px;
+
 }
 
