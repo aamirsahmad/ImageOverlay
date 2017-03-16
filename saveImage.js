@@ -34,11 +34,15 @@ function createCanvas(){
 	context.drawImage(lassondeLogo,-50, canvas.height - 346);
 
 
-	var dt = canvas.toDataURL('image/png');
-	//dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
-    saveLink.href = dt;
-
     Console.log("Over here");
 }	
 
 
+function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+}
+
+document.getElementById('saveButton').addEventListener('click', function() {
+    downloadCanvas(this, 'canvas', 'test.png');
+}, false);
