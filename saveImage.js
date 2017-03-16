@@ -33,16 +33,10 @@ function createCanvas(){
 	context.drawImage(goat,mainImageX,mainImageY,goat.width, goat.height);
 	context.drawImage(lassondeLogo,-50, canvas.height - 346);
 
+	saveLink.href = document.getElementById(canvas).toDataURL();
+    saveLink.download = 'test.png';
 
-    Console.log("Over here");
+
+    Console.log("DONE");
 }	
 
-
-function downloadCanvas(link, canvasId, filename) {
-    link.href = document.getElementById(canvasId).toDataURL();
-    link.download = filename;
-}
-
-document.getElementById('saveButton').addEventListener('click', function() {
-    downloadCanvas(this, 'canvas', 'test.png');
-}, false);
