@@ -40,7 +40,7 @@ function createCanvas(){
 
 	var dt = canvas.toDataURL('image/png');
 	dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
-    this.href = dt;
+    saveLink.href = dt;
 
     Console.log("Over here");
 }	
