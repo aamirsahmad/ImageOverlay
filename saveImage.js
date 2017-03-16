@@ -16,8 +16,6 @@ function createCanvas(){
 	style = window.getComputedStyle(mainImage, false); //Get the updated style page
 	src = style.getPropertyValue("background-image").slice(4,-1).replace(/"/g, ""); //Get background url and rid excess characters
 
-	console.log(style.getPropertyValue("background-position-x"));
-
 	//Get X & Y positions of the background image
 	mainImageY = parseInt(style.getPropertyValue("background-position-y"));
 	mainImageX = parseInt(style.getPropertyValue("background-position-x"));

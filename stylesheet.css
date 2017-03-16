@@ -11,7 +11,7 @@ p {
 }
 
 canvas {
-	border: 5px;
+	border: 1px;
 	border-style: solid;
 	position: relative;
 	width: 800px;
@@ -21,7 +21,7 @@ canvas {
 
 
 #mainImageContainer {
-	border: 5px;
+	border: 1px;
 	border-style: solid;
 	position: relative;
 	width: 800px;
@@ -37,10 +37,12 @@ canvas {
 }
 
 .buttonContainer {
-	margin: 0 auto;
-	display: inline;
-	border-color: rgb(250,0,255); 
-	position: relative;
+	border-color: rgb(0,0,255); 
+	border: 1px;
+	border-style: solid;
+	display: inline-block;
+	position: absolute;
+
 }
 
 .button {
@@ -51,20 +53,35 @@ canvas {
     color: #FFFFFF;	   
     border-radius: 6px;
     cursor: pointer;
-    display: inline-block;
+    position: relative;
     font-style: normal;
     overflow: hidden;
     text-align: center;
     text-decoration: none;
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
-    white-space: nowrap;	
-    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
     font-weight: 700;	
-    padding: 19px 39px 18px;
+    padding: 10px 40px 18px 10px;
     font-size: 18px;
-     border-color: #3AC162;
+}
+
+#uploadButton {
+	border-color: #326E99;
+    background-color: #3F8ABF;
+}
+#uploadButton:hover, #uploadButton:focus, #uploadButton:active {
+    background-color: #5058AD;
+    border-color: #3D4387;  
+}
+#saveButton {
+	width: 340px;
+	height: 60px;
+	border-color: #3AC162;
 	background-color: #5FCF80;
+}
+#saveButton:hover, #saveButton:focus, #saveButton:active {
+    background-color: #50AD6B;
+    border-color: #3AC162;  
 }
 
 #transparentBox {
