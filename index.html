@@ -6,28 +6,44 @@
 	</head>
 	<body>
 
-		
 
 		<div id="mainTitleContainer">
-			<h1 id="title"> Drag me </h1>
+			<h1 id="title"> Lassonde Photo Overlay </h1>
+		</div>
+
+		<div class="imageContainer" >
+
+			<div  id = "mainImageContainer">
+				<img src = "LassondeLogo.png" class="overlay" id="overlayImage"> 
+				<img src = "" class="" id="uploadedImg">
+			</div>
+
+			<div >
+				<canvas id="cnv"> CANVAS </canvas>
+			</div>
+
 		</div>
 
 
-
-		<div class="imageContainer" id = "mainImageContainer">
-			<img src = "LassondeLogo.png" class="overlay" id="overlayImage"> 
+		<div class="buttonContainer">
+			<input type="file" class="button" onchange="previewFile()">
+			<div class="button" onclick="createCanvas()"> <p>SAVE</p> </div>
 		</div>
-			
-		<canvas id="cnv" onclick="createCanvas()"> CANVAS</canvas>
+
+
+		
 
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<script src="upload.js"></script>
 		<script src="saveImage.js"></script>
 		<script src="drag.js"></script>
 		
 		<script type = "text/javascript">
 		//JAVASCRIPT
 		//changeTitle();
+
+
 		</script>
 	</body>
 </html>
