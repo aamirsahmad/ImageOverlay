@@ -33,9 +33,16 @@ function createCanvas(){
 	context.drawImage(goat,mainImageX,mainImageY,goat.width, goat.height);
 	context.drawImage(lassondeLogo,-50, canvas.height - 346);
 
+	var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"); 
+	window.location.href=image; // it will save locally
+
+	console.log("Here");
+
 	var dt = canvas.toDataURL('image/png');
 	dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
     this.href = dt;
+
+    Console.log("Over here");
 }	
 
 
