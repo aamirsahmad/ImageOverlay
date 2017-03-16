@@ -1,6 +1,7 @@
 
 
 function previewFile() {
+  //Taken from:
 	//https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL
   var uploadedImage = document.getElementById("uploadedImg"); //Get uploaded Image
   var mainImage = document.getElementById("mainImageContainer");
