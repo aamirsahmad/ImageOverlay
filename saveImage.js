@@ -34,8 +34,8 @@ function createCanvas(){
 	context.drawImage(lassondeLogo,-50, canvas.height - 346);
 
 	saveLink.href = canvas.toDataURL();
-    saveLink.download = 'test.png';
-
+    saveLink.download = 'image.png';
+    saveLink.click();
 
     console.log("DONE"); 
 }	
