@@ -35,7 +35,7 @@ function createCanvas(){
 
 
 	var dt = canvas.toDataURL('image/png');
-	dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
+	//dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
     saveLink.href = dt;
 
     Console.log("Over here");
