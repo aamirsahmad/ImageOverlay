@@ -37,6 +37,6 @@ function createCanvas(){
     saveLink.download = 'test.png';
 
 
-    Console.log("DONE");
+    Console.log("DONE"); 
 }	
 
