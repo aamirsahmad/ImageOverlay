@@ -31,17 +31,14 @@ canvas {
 	background-repeat: no-repeat;
 	float: left;
 }
-.imageContainer {
-	width: 1800px;
-	height: 600px;
-}
+
 
 .buttonContainer {
 	border-color: rgb(0,0,255); 
 	border: 1px;
 	border-style: solid;
-	display: inline-block;
-	position: absolute;
+	display: flex;
+	position: relative;
 
 }
 
@@ -63,6 +60,7 @@ canvas {
     font-weight: 700;	
     padding: 10px 40px 18px 10px;
     font-size: 18px;
+
 }
 
 #uploadButton {
