@@ -26,7 +26,7 @@ canvas {
 	position: relative;
 	width: 800px;
 	height: 600px;
-	background-image: url("img.jpg");
+	
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	float: left;
