@@ -6,6 +6,8 @@ function createCanvas(){
 	var mainImage = document.getElementById("mainImageContainer");
 	var saveLink = document.getElementById("saveLink");
 	var canvas = document.createElement("canvas");
+	canvas.width = 800;
+	canvas.height = 600;
 	var context = canvas.getContext('2d');
 
 	var mainImageY;
@@ -23,8 +25,7 @@ function createCanvas(){
 
 	goat = new Image();
 	goat.src = src;
-	canvas.width = 800;
-	canvas.height = 600;
+
 
 	//Draw images to canvas 
 	//https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D/drawImage
