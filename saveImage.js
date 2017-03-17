@@ -5,7 +5,7 @@ function createCanvas(){
 
 	var mainImage = document.getElementById("mainImageContainer");
 	var saveLink = document.getElementById("saveLink");
-	var canvas = document.getElementById("cnv");
+	var canvas = document.createElement("canvas");
 	var context = canvas.getContext('2d');
 
 	var mainImageY;
