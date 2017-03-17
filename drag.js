@@ -30,6 +30,10 @@ function mouseDownEvent(e){
 	//console.log("Mouse down");
 	//Store initial mouse location 
 	//Check if we are dragging inside the draggable area (includes the image that is overlayed)
+	if(e.target.id == "slider"){
+		return true;
+	}
+
 	if(e.target.id == "mainImageContainer" || e.target.id == "overlayImage"){
 		yInitial = e.clientY;
 		xInitial = e.clientX;
