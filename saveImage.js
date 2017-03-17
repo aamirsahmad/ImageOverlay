@@ -7,8 +7,8 @@ function createCanvas(){
 	var slider = document.getElementById("slider");
 	//image.style.backgroundSize = slider.value + '%'; //Adjust the size of the image
 	var saveLink = document.getElementById("saveLink");
-	//var canvas = document.getElementById("testCanvas");
 	var canvas = document.createElement("canvas");
+	
 	
 	//Create canvas with specified width and height
 	canvas.width = 800;
