@@ -7,7 +7,17 @@ var imageStyle;
 
 function updateSlider(){
 
-	sliderValue.innerHTML = parseInt(slider.value / 200  * 100) + '%';//Update the value below the slider
-	image.style.backgroundSize = slider.value + '%'; //Adjust the size of the image
+
+		//sliderValue.innerHTML = parseInt(slider.value / 200  * 100) + '%';//Update the value below the slider
+		sliderValue.innerHTML = parseInt(slider.value) + '/200';//Update the value below the slider
+		image.style.backgroundSize = slider.value + '%'; //Adjust the size of the image
+		
 	
 }
+
+
+
+/*
+
+
+*/
