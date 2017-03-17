@@ -8,6 +8,7 @@ function createCanvas(){
 	var canvas = document.createElement("canvas");
 	canvas.width = 800;
 	canvas.height = 600;
+	//ADDED THAT
 	var context = canvas.getContext('2d');
 
 	var mainImageY;
