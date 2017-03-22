@@ -15,14 +15,49 @@ body, html {height: 100%}
     background-size: cover;
 }
 </style>
-<body>
-
+<body>    
+    
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="w3-display-topleft w3-padding-large w3-xlarge">
     Logo
   </div>
   <div class="w3-display-middle">
     <h1 class="w3-jumbo w3-animate-top">Pierre's Birthday Filter</h1>
+      
+      <div class="imageContainer" >
+
+			<div  id = "mainImageContainer" class="draggable">
+				<img src = "LassondeLogo.png" class="overlay" id="overlayImage"> 
+				<img src = "" class="" id="uploadedImg">
+			</div>
+
+		</div>
+
+		<div class="buttonContainer">
+
+			<input type="file"   class="button" id="uploadButton" onchange="previewFile()"> 
+			<div class="button" id="saveButton" onclick="createCanvas()">
+				<p>SAVE IMAGE</p>
+				<a href="#" title=""  download="image.png" id="saveLink"> SAVE </a>
+			</div>
+
+			<div class="sliderContainer">
+				<input type="range" min=0 max=200 step="1" oninput="updateSlider()" onupdate="updateSlider()" value="100" id="slider">
+				<h2 id="sliderVal">50</h2>
+			</div>
+			
+		</div>
+
+
+		<script src="upload.js"></script>
+		<script src="saveImage.js"></script>
+		<script src="drag.js"></script>
+		<script src="slider.js"></script>
+		<script type = "text/javascript">
+		//JAVASCRIPT
+		updateSlider();
+		</script>    
+      
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center">04/17/2017</p>
   </div>
