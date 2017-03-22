@@ -12,7 +12,7 @@ var enableDrag = false;
 
 window.onload = function() {
 	
-	//Initialize starting attributes of picture (Should be done in CSS?)
+	//Initialize starting attributes of picture
 	image.style.backgroundPositionX = '0px';
 	image.style.backgroundPositionY = '0px';
 	
@@ -68,6 +68,3 @@ function mouseReleaseEvent(e){
 	enableDrag = false;
 	return true;
 }
-
-
-//console.log('X:' + e.clientX + ' Y:' + e.clientY + ' TOP:' + parseInt(image.style.top));

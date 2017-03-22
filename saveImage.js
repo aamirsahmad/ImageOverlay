@@ -7,20 +7,19 @@ function createCanvas(){
 	var slider = document.getElementById("slider");
 	//image.style.backgroundSize = slider.value + '%'; //Adjust the size of the image
 	var saveLink = document.getElementById("saveLink");
+	//var canvas = document.getElementById("testCanvas"); //Use this for testing locally
 	var canvas = document.createElement("canvas");
 	
 	
 	//Create canvas with specified width and height
-	canvas.width = 800;
-	canvas.height = 600;
+	canvas.width = 1080;
+	canvas.height = 1080;
 	var context = canvas.getContext('2d');
 
 	var mainImageX, mainImageY;
 	var imageWidth, imageHeight;
 
-	lassondeLogo = new Image();
-	lassondeLogo.src = 'LassondeLogo.png';
-
+	//Get computed styles (current values after resizing, not values on page load)
 	style = window.getComputedStyle(mainImage, false); //Get the updated style page
 	src = style.getPropertyValue("background-image").slice(4,-1).replace(/"/g, ""); //Get background url and rid excess characters
 
@@ -29,20 +28,21 @@ function createCanvas(){
 	mainImageX = parseInt(style.getPropertyValue("background-position-x"));
 
 	//Get width and height of source image by saving it as an image first
-	//console.log(style.getPropertyValue("background-size"));
-
 	savedImage = new Image();
 	savedImage.src = src;
+
+	//Get width and height of overlay image
+	var currentOverlayImage = document.getElementById("overlayImage");
+	CanvasOverlayImage = new Image();
+	CanvasOverlayImage.src = currentOverlayImage.src;
 
 	imageWidth = savedImage.width; //Original width of the image
 	imageHeight = savedImage.height; //Original height of the image
 
-	var sliderRatio = 100/slider.value; //The ratio of the slider (ranges from 0-200) with 100 = original size
+	var sliderRatio = 100/slider.value; //The ratio of the slider (ranges from 0-400) with 100 = original size
 
 	var scaleX = parseInt(imageWidth*(sliderRatio)); //scale the width of the image with accordance to the ratio
 	var scaleY =  parseInt(imageHeight*(sliderRatio)); //scale the height of the image with accordance to the ratio
-
-
 
 	//Draw images to canvas 
 	//https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D/drawImage
@@ -69,10 +69,8 @@ function createCanvas(){
 	);
 
 
-
-	context.drawImage(lassondeLogo,-50, canvas.height - 346);
-
-	//*******SAVING DISABLED JUST FOR EASE OF TESTING **************//
+	//Place overlay image 20 px from left, and 20px from bottom
+	context.drawImage(CanvasOverlayImage, 20, canvas.height - overlayImage.height-20);
 
 	//Save canvas URL to a link
 	saveLink.href = canvas.toDataURL();

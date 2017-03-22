@@ -14,8 +14,8 @@ canvas {
 	border: 1px;
 	border-style: solid;
 	position: relative;
-	width: 800px;
-	height: 600px;
+	width: 1080px;
+	height: 1080px;
 }
 
 
@@ -24,11 +24,12 @@ canvas {
 	border: 1px;
 	border-style: solid;
 	position: relative;
-	width: 800px;
-	height: 600px;
+	width: 1080px;
+	height: 1080px;
 	
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
+	background-position: center center; 
 	float: left;
 }
 
@@ -69,7 +70,9 @@ canvas {
 	border-color: #326E99;
     background-color: #3F8ABF;
 }
-#uploadButton:hover, #uploadButton:focus, #uploadButton:active {
+#uploadButton:hover, #uploadButton:focus, #uploadButton:active,
+#leftButton:hover, #leftButton:focus, #leftButton:active,
+#rightButton:hover, #rightButton:focus, #rightButton:active{
     background-color: #5058AD;
     border-color: #3D4387;  
 }
@@ -91,6 +94,12 @@ canvas {
     font-size: 18px;
 }
 
+#leftButton, #rightButton {
+	border-color: #326E99;
+    background-color: #3F8ABF;
+
+}
+
 .sliderContainer {
 	padding: 25px 10px 0px 10px;
 	text-align: center;
@@ -102,8 +111,8 @@ canvas {
 
 #overlayImage {
 	position: absolute;
-	left: -50px;
-	bottom: -50px;
+	left: 20px;
+	bottom: 20px;
 
 }
 
