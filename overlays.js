@@ -1,8 +1,8 @@
 var overlayImage = document.getElementById("overlayImage");
 
 //Add filenames for overlays here
-var lassondeLogo = 'LassondeLogo.png';
-var yorkuLogo = 'yuLogo.png';
+var lassondeLogo = 'filter1.png';
+var yorkuLogo = 'filter2.png';
 
 //Add overlays to array
 var overlays = [lassondeLogo, yorkuLogo];

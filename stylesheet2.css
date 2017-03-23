@@ -14,8 +14,8 @@ canvas {
 	border: 1px;
 	border-style: solid;
 	position: relative;
-	width: 1080px;
-	height: 1080px;
+	width: 360px;
+	height: 360px;
 }
 
 
@@ -24,34 +24,36 @@ canvas {
 	border: 1px;
 	border-style: solid;
 	position: relative;
-	width: 1080px;
-	height: 1080px;
+	width: 360px;
+	height: 360px;
+	
 	
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	background-position: center center; 
-	float: left;
+	margin: 0 auto;
 }
 
 
 
 .buttonContainer {
 	border-color: rgb(0,0,255); 
-	border: 1px;
+	border: 0px;
 	border-style: solid;
 	display: flex-inline;
 	position: relative;
-	float: left;
+	margin: 0 auto;
+	width: 360px;
 
 }
 
 .button {
 	/*http://codepen.io/Pixcils/pen/KfzFL*/
     border-style: solid;
-    border-width: 0px 0px 3px;
+    border-width: 0px 0px 1px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
     color: #FFFFFF;	   
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
     position: relative;
     font-style: normal;
@@ -60,9 +62,9 @@ canvas {
     text-decoration: none;
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
-    font-weight: 700;	
+    font-weight: 200;	
     padding: 10px 40px 18px 10px;
-    font-size: 18px;
+    font-size: 12px;
 
 }
 
@@ -77,7 +79,7 @@ canvas {
     border-color: #3D4387;  
 }
 #saveButton {
-	width: 340px;
+	width: 345px;
 	height: 60px;
 	border-color: #3AC162;
 	background-color: #5FCF80;
@@ -97,22 +99,24 @@ canvas {
 #leftButton, #rightButton {
 	border-color: #326E99;
     background-color: #3F8ABF;
+	width: 360;
 
 }
 
 .sliderContainer {
-	padding: 25px 10px 0px 10px;
+	padding: 15px 5px 0px 5px;
 	text-align: center;
 }
 
 #slider {
-	width: 100%;
+	width: 80%;
 }
 
 #overlayImage {
 	position: absolute;
 	left: 0px;
-	bottom: 0px;
+	bottom: 5px;
+	width: 100%;
 
 }
 
