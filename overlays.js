@@ -1,11 +1,15 @@
 var overlayImage = document.getElementById("overlayImage");
 
 //Add filenames for overlays here
-var lassondeLogo = 'filter1.png';
-var yorkuLogo = 'filter2.png';
+var barOverlay = 'bar-overlay.png';
+var cloudOverlay = 'cloud-overlay.png';
+var filter1Overlay = 'filter1.png';
+var filter2Overlay = 'filter2.png';
+//var filter3Overlay = 'filter3.png'; //Duplicate
+
 
 //Add overlays to array
-var overlays = [lassondeLogo, yorkuLogo];
+var overlays = [barOverlay, cloudOverlay, filter1Overlay, filter2Overlay ];
 var position = 0;
 
 //Go to the previous image overlay
