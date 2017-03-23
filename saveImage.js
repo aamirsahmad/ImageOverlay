@@ -71,7 +71,7 @@ function createCanvas(){
 
 
 	//Place overlay image 20 px from left, and 20px from bottom
-	context.drawImage(CanvasOverlayImage, 20, canvas.height - overlayImage.height-20);
+	context.drawImage(CanvasOverlayImage, 0, canvas.height - overlayImage.height);
 
 	//Save canvas URL to a link
 	saveLink.href = canvas.toDataURL();
