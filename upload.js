@@ -25,26 +25,41 @@ function previewFile() {
 
     imageWidth = savedImage.width;
     imageHeight = savedImage.height;
-    console.log(imageHeight);
-    //Set to 50% size of container
-    
-    //Center the image vertically and horizontally
-    horizontalScaleRatio = 2160/imageWidth;
-    imagePositionX = -1*(1080/2);
-    imagePositionY = -1*(horizontalScaleRatio*imageHeight - 1080)/2; 
 
-    //Ensure the image always fills the screen
-    if(imageHeight*horizontalScaleRatio < 1080){
-      //If the image is not high enough to fill the screen, adjust accordingly
-      slider.value = (1080/imageHeight) * 200;
-      imagePositionY = 0;
+    var scaleHorizontal;
+    var scaleVertical;
+
+    //Determine wether the width or height is the scaling factor (ie a landscape photo would scale so the height fits)
+    if(imageHeight < imageWidth){
+      scaleHorizontal = false;
+      scaleVertical = true;
     }else{
-      //Default to 100% width of container
-      slider.value = 200;
+      scaleHorizontal = true;
+      scaleVertical = false;
     }
 
+    //Scale image so it always fills the screen
+    if(scaleHorizontal){
+      console.log("Scaling Horizontal");
+      scale = 1080/imageWidth;
+      slider.value = 100;
+      imagePositionX = 0;
+      imagePositionY = -1*((imageHeight*scale)-1080)/2;
+    }else if(scaleVertical){
+      //console.log("Scaling Vertically");
+      scale = 1080/imageHeight;
+      slider.value = 100*((imageWidth*scale)/1080);
+
+      imagePositionX = -1*((imageWidth*scale)-1080)/2;
+      imagePositionY = 0;
+    }
+
+
+   //console.log(imageWidth + 'X' + imageHeight + ' Slider: ' + slider.value);
     
-  
+    //Center the image vertically and horizontally
+    horizontalScaleRatio = 1080/imageWidth;
+
 
 
     updateSlider();
