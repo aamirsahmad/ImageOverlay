@@ -3,53 +3,70 @@
 	<head>
 		<link rel="stylesheet" href="stylesheet.css" title="external style sheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,200,400,500" rel="stylesheet">
+		<title>Birthday Filter</title>
+		<!-- insert V -->
 		<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1 {font-family: "Raleway", Arial, sans-serif}
-h1 {letter-spacing: 6px}
-.w3-row-padding img {margin-bottom: 12px}
-</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+		body,h1 {font-family: "Raleway", Arial, sans-serif}
+		h1 {letter-spacing: 6px}
+		.w3-row-padding img {margin-bottom: 12px}
+		</style>
+		<!-- insert ^ -->
+		
 	</head>
 	<body>
 
-		
+<!-- insert V -->
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
 
-
-		<div id="mainTitleContainer">
-			<h1 id="title"> Lassonde Photo Overlay - BETA </h1>
-		</div>
-
+<!-- Header -->
+<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
+  <h1 class="w3-xlarge">Pierre Lassonde's</h1>
+  <h1>Birthday Filter</h1>
+<!-- insert ^ -->
+	
+	
 		<div class="imageContainer" >
 
 			<div  id = "mainImageContainer" class="draggable">
-				<img src = "LassondeLogo.png" class="overlay" id="overlayImage"> 
+				<img src = "bar-overlay.png" class="overlay" id="overlayImage"> 
 				<img src = "" class="" id="uploadedImg">
 			</div>
 
 		</div>
-
-
+		<br />
+		<br />
+		
+<!-- insert V		
+		<div class="w3-padding-32" float="left">
+    <div class="w3-bar w3-border">
+      <input type="file" class="w3-bar-item w3-button" id="uploadButton" onchange="previewFile()">
+      <br />
+      <br />
+      <a href="#" class="w3-bar-item w3-button"> < </a>
+      <a href="#" class="w3-bar-item w3-button">Save</a>
+      <a href="#" class="w3-bar-item w3-button"> > </a>
+    </div>
+  </div>
+<!-- insert ^ -->
 		<div class="buttonContainer">
 
-			<input type="file"   class="button" id="uploadButton" onchange="previewFile()"> 
-			<div class="button" id="saveButton" onclick="createCanvas()">
-				<p>SAVE IMAGE</p>
-				<a href="#" title=""  download="image.png" id="saveLink"> SAVE </a>
+			<input type="file"   class="w3-bar-item w3-button" id="uploadButton" onchange="previewFile()">
+			<div class="w3-bar-item w3-button" onclick="nextImage()"><img src="arrow1.png" width="313" height="40"></div>
+			<div class="w3-bar-item w3-button" id="saveButton" onclick="createCanvas()">
+				SAVE IMAGE
+				<a href="#" title=""  download="image.png" id="saveLink"></a>
 			</div>
 
 
 			<div class="sliderContainer">
 				<input type="range" min=0 max=400 step="1" oninput="updateSlider()" onupdate="updateSlider()" value="0" id="slider">
 				<h2 id="sliderVal">50</h2>
-			</div>
-
-			<div class="leftrightContainer">
-				<div class="button" id="leftButton" onclick="previousImage()"> <p> < </p> </div>
-				<div class="button" id="rightButton" onclick="nextImage()"><p> > </p> </div>
 			</div>
 			
 			<!-- <canvas id="testCanvas">THIS CANVAS IS FOR TESTING LOCALLY </canvas> -->
