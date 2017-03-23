@@ -12,13 +12,9 @@ function createCanvas(){
 	
 	
 	//Create canvas with specified width and height
-<<<<<<< HEAD
 	canvas.width = 1080;
 	canvas.height = 1080;
-=======
-	canvas.width = 1024;
-	canvas.height = 1024;
->>>>>>> 7c00844661ef32c7b2afc9c2f9b4e4f240f5b81e
+
 	var context = canvas.getContext('2d');
 
 	var mainImageX, mainImageY;
