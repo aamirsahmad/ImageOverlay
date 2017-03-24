@@ -1,3 +1,4 @@
+
 body {
 
 	background-color: #f7f8f9;
@@ -72,7 +73,7 @@ canvas {
 #uploadButton {
 	border-color: #004C98;
     background-color: #004C98;
-	padding: 30px 5px;
+	padding: 40px 5px;
 }
 #uploadButton:hover, #uploadButton:focus, #uploadButton:active {
 	background-color: #006CD7;
@@ -84,7 +85,7 @@ canvas {
 #saveButton {
 	width: 540px;
 	height: 60px;
-	padding: 0px 0px 20px 0px;
+	padding: 10px 0px 30px 0px;
 	border-color: #EABC09;
 	background-color: #FFCC00;
 }
@@ -102,12 +103,14 @@ canvas {
 	border-color: #2F8E8D;
     background-color: #339999;
 	width: 540px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	margin-bottom: 4px;
 
 }
 
 .sliderContainer {
-	padding: 15px 10px 0px 10px;
+	padding: 20px 10px 0px 10px;
 	text-align: center;
 }
 
@@ -122,5 +125,4 @@ canvas {
 	width: 100%;
 
 }
-
 
