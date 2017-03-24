@@ -1,5 +1,4 @@
 
-
 body {
 
 	background-color: #f7f8f9;
@@ -15,8 +14,8 @@ canvas {
 	border: 1px;
 	border-style: solid;
 	position: relative;
-	max-width: 1080px;
-	height: 1080px;
+	width: 360px;
+	height: 360px;
 }
 
 #mainTitleContainer {
@@ -32,13 +31,13 @@ canvas {
 	border: 1px;
 	border-style: solid;
 	position: relative;
-	max-width: 1080px;
-	height: 1080px;
+	width: 360px;
+	height: 360px;
 	
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	background-position: center center; 
-	margin: 0 auto;
+
 }
 
 
@@ -124,4 +123,3 @@ canvas {
 	width: 100%;
 
 }
-
