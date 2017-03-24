@@ -1,4 +1,3 @@
-
 body {
 
 	background-color: #f7f8f9;
@@ -66,14 +65,14 @@ canvas {
     transition: all 200ms ease-in-out 0s;
     font-weight: 700;	
     font-size: 18px;
-	width: 350px
+	width: 530px
 
 }
 
 #uploadButton {
 	border-color: #004C98;
     background-color: #004C98;
-	padding: 12px 5px;
+	padding: 30px 5px;
 }
 #uploadButton:hover, #uploadButton:focus, #uploadButton:active {
 	background-color: #006CD7;
@@ -83,9 +82,9 @@ canvas {
     background-color: #46D4D2;
 }
 #saveButton {
-	width: 360px;
+	width: 540px;
 	height: 60px;
-	padding: 0px 0px 10px 0px;
+	padding: 0px 0px 20px 0px;
 	border-color: #EABC09;
 	background-color: #FFCC00;
 }
@@ -102,8 +101,8 @@ canvas {
 #leftButton, #rightButton {
 	border-color: #2F8E8D;
     background-color: #339999;
-	width: 360px;
-	margin-bottom: 3px;
+	width: 540px;
+	margin-bottom: 4px;
 
 }
 
@@ -123,3 +122,5 @@ canvas {
 	width: 100%;
 
 }
+
+
