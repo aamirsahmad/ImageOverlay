@@ -73,7 +73,7 @@ canvas {
 #uploadButton {
 	border-color: #004C98;
     background-color: #004C98;
-	padding: 40px 5px;
+	padding: 35px 5px;
 }
 #uploadButton:hover, #uploadButton:focus, #uploadButton:active {
 	background-color: #006CD7;
@@ -103,8 +103,8 @@ canvas {
 	border-color: #2F8E8D;
     background-color: #339999;
 	width: 540px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	margin-bottom: 4px;
 
 }
