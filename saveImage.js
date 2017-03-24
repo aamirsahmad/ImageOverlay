@@ -76,8 +76,8 @@ function createCanvas(){
 	//Save canvas URL to a link
 	//saveLink.href = canvas.toDataURL();
 	saveLink.href = canvas.toDataURL('image/jpeg', 0.7);
-   	saveLink.download = 'image.png';
-    //saveLink.click(); //Simulate a click on the link to initiate download in browser
+   	saveLink.download = 'image';
+    saveLink.click(); //Simulate a click on the link to initiate download in browser
     
 
     //console.log("DONE"); 
