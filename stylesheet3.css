@@ -11,11 +11,11 @@ p {
 }
 
 canvas {
-	border: 1px;
+	border: 5px #3F3F3F;
 	border-style: solid;
 	position: relative;
-	width: 540px;
-	height: 540px;
+	width: 1080px;
+	height: 1080px;
 }
 
 #mainTitleContainer {
@@ -24,15 +24,15 @@ canvas {
 
 #title {
 	font-family: "avenir";
-	font-weight: 100;
+	font-weight: 200;
 }
 
 #mainImageContainer {
-	border: 1px;
+	border: 5px #3F3F3F;
 	border-style: solid;
 	position: relative;
-	width: 540px;
-	height: 540px;
+	width: 1080px;
+	height: 1080px;
 	
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
@@ -43,14 +43,10 @@ canvas {
 
 
 .buttonContainer {
-	border-color: rgb(0,0,255); 
-	border: 1px;
-	border-style: solid;
 	display: flex-inline;
 	position: relative;
 	float: left;
-	width: 360px;
-
+	
 }
 
 .button {
@@ -69,48 +65,52 @@ canvas {
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
     font-weight: 700;	
-    padding: 40px 0px;
     font-size: 18px;
-	width: 360px
+	width: 530px
 
 }
 
 #uploadButton {
-	border-color: #326E99;
-    background-color: #3F8ABF;
+	border-color: #004C98;
+    background-color: #004C98;
+	padding: 35px 5px;
 }
-#uploadButton:hover, #uploadButton:focus, #uploadButton:active,
+#uploadButton:hover, #uploadButton:focus, #uploadButton:active {
+	background-color: #006CD7;
+}
 #leftButton:hover, #leftButton:focus, #leftButton:active,
 #rightButton:hover, #rightButton:focus, #rightButton:active{
-    background-color: #5058AD;
-    border-color: #3D4387;  
+    background-color: #46D4D2;
 }
 #saveButton {
-	width: 340px;
+	width: 540px;
 	height: 60px;
-	border-color: #3AC162;
-	background-color: #5FCF80;
+	padding: 10px 0px 30px 0px;
+	border-color: #EABC09;
+	background-color: #FFCC00;
 }
 #saveButton:hover, #saveButton:focus, #saveButton:active {
-    background-color: #50AD6B;
-    border-color: #3AC162;  
+    background-color: #FFE47F;
 }
 
 #saveLink {
-	font-family: 'Roboto';
-	font-weight: 700;	
-    padding: 10px 40px 18px 10px;
-    font-size: 18px;
+	font-family: "avenir";
+	font-weight: 100;	
+    font-size: 5px;
 }
 
 #leftButton, #rightButton {
-	border-color: #326E99;
-    background-color: #3F8ABF;
+	border-color: #2F8E8D;
+    background-color: #339999;
+	width: 540px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 4px;
 
 }
 
 .sliderContainer {
-	padding: 25px 10px 0px 10px;
+	padding: 20px 10px 0px 10px;
 	text-align: center;
 }
 
