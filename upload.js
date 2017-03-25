@@ -33,7 +33,9 @@ function previewFile() {
 
     //*ORIENTATION FIXING*//
     //Should be consolidated into seperate function
+    orientVal = document.getElementById("orientationValue");
     console.log("Orientation Number:" + OrientationNumber);
+    orientVal.innerHTML = (OrientationNumber);
     //ROTATE 90 DEGREES CW
     if(OrientationNumber == 6){ 
       console.log("Rotating");
