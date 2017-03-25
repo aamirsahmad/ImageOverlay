@@ -1,4 +1,4 @@
-
+var OrientationNumber;
 
 function previewFile() {
   //Taken from:
@@ -8,12 +8,16 @@ function previewFile() {
   var file    = document.querySelector('input[type=file]').files[0];
   var reader  = new FileReader();
 
+
+
   //Load the image
   reader.addEventListener("load", function () {
 
+    
+
     //Load image into background
-  	 var imageUrl = 'url(' + reader.result + ')'; //Convert DataURL to url
-     mainImage.style.backgroundImage = imageUrl;//Set background
+  	 var imageUrl = 'url(' + reader.result + ')';//Convert DataURL to url
+    mainImage.style.backgroundImage = imageUrl;//Set background
 
     //Get image url so we can compute sizing ratios
     style = window.getComputedStyle(mainImage, false); //Get the updated style page
@@ -23,8 +27,39 @@ function previewFile() {
     savedImage = new Image();
     savedImage.src = src;
 
+
     imageWidth = savedImage.width;
     imageHeight = savedImage.height;
+
+    //*ORIENTATION FIXING*//
+    //Should be consolidated into seperate function
+
+    //ROTATE 90 DEGREES CW
+    if(OrientationNumber == 6){ 
+
+      //Create the canvas for changing orientation
+      //var oCanvas = document.getElementById("testCanvas"); //Use this for testing locally
+      var oCanvas = document.createElement("canvas");
+
+      oCanvas.width = imageHeight;
+      oCanvas.height = imageWidth;
+
+      var oContext = oCanvas.getContext("2d");
+     
+      oContext.rotate(0.5 * Math.PI); //Rotate Canvas 90 Degrees
+      oContext.translate(0, -oCanvas.width); //Move back into position
+      oContext.drawImage(savedImage, 0 ,0); //Update Canvas
+
+      //Overwrite save image with the rotated image
+      savedImage.src = oCanvas.toDataURL();
+      //Update height and width variables
+      imageWidth = savedImage.width;
+      imageHeight = savedImage.height;
+
+    }
+
+    var imageUrl = 'url(' + savedImage.src  + ')';//Convert DataURL to url
+    mainImage.style.backgroundImage = imageUrl;//Set background
 
     var scaleHorizontal;
     var scaleVertical;
@@ -40,7 +75,6 @@ function previewFile() {
 
     //Scale image so it always fills the screen
     if(scaleHorizontal){
-      console.log("Scaling Horizontal");
       scale = 1080/imageWidth;
       slider.value = 100;
       imagePositionX = 0;
@@ -60,8 +94,6 @@ function previewFile() {
     //Center the image vertically and horizontally
     horizontalScaleRatio = 1080/imageWidth;
 
-
-
     updateSlider();
     //Update position of background
     image.style.backgroundPositionX = imagePositionX + 'px';
@@ -70,7 +102,49 @@ function previewFile() {
   }, false);
 
   if (file) {
+    
+
+    var binaryReader = new FileReader();
+    binaryReader.readAsBinaryString(file);
+
+    var photoOrientation;
+    getOrientation(file, function(orientation){
+       OrientationNumber = orientation;
+    });
+
     reader.readAsDataURL(file); //Read in as DataURL
   }
 
+}
+
+
+
+//Ali Novin
+//http://stackoverflow.com/questions/7584794/accessing-jpeg-exif-rotation-data-in-javascript-on-the-client-side
+function getOrientation(file, callback) {
+  var reader = new FileReader();
+  reader.onload = function(e) {
+
+    var view = new DataView(e.target.result);
+    if (view.getUint16(0, false) != 0xFFD8) return callback(-2);
+    var length = view.byteLength, offset = 2;
+    while (offset < length) {
+      var marker = view.getUint16(offset, false);
+      offset += 2;
+      if (marker == 0xFFE1) {
+        if (view.getUint32(offset += 2, false) != 0x45786966) return callback(-1);
+        var little = view.getUint16(offset += 6, false) == 0x4949;
+        offset += view.getUint32(offset + 4, little);
+        var tags = view.getUint16(offset, little);
+        offset += 2;
+        for (var i = 0; i < tags; i++)
+          if (view.getUint16(offset + (i * 12), little) == 0x0112)
+            return callback(view.getUint16(offset + (i * 12) + 8, little));
+      }
+      else if ((marker & 0xFF00) != 0xFF00) break;
+      else offset += view.getUint16(offset, false);
+    }
+    return callback(-1);
+  };
+  reader.readAsArrayBuffer(file);
 }

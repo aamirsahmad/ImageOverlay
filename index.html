@@ -13,15 +13,15 @@
 			<h1 id="title"> Lassonde Photo Overlay - BETA </h1>
 		</div>
 
-		<div class="imageContainer" >
+		<div class=wrapperContainer > 
+			<div class="imageContainer" >
+				<div  id = "mainImageContainer" class="draggable">
+					<img src = "filter1.png" class="overlay" id="overlayImage"> 
+					<img src = "" class="" id="uploadedImg">
+				</div>
 
-			<div  id = "mainImageContainer" class="draggable">
-				<img src = "filter1.png" class="overlay" id="overlayImage"> 
-				<img src = "" class="" id="uploadedImg">
 			</div>
-
 		</div>
-
 
 		<div class="buttonContainer">
 
@@ -42,7 +42,7 @@
 				<div class="button" id="rightButton" onclick="nextImage()"><p> > </p> </div>
 			</div>
 			
-			 <!-- <canvas id="testCanvas">THIS CANVAS IS FOR TESTING LOCALLY </canvas> -->
+			  <!--<canvas id="testCanvas">THIS CANVAS IS FOR TESTING LOCALLY </canvas> -->
 				
 			
 		</div>
@@ -53,6 +53,9 @@
 		<script src="drag.js"></script>
 		<script src="slider.js"></script>
 		<script src="overlays.js"></script>
+
+		<script src="exif.js"></script>
+		<script src="binaryajax.js"></script>
 		<script type = "text/javascript">
 		//JAVASCRIPT
 		updateSlider();

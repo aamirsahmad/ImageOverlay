@@ -10,15 +10,13 @@ p {
 	font-size: 25px;
 }
 
-canvas {
-	border: 1px;
-	border-style: solid;
+
+
+
+.wrapperContainer {
 	position: relative;
-	width: 1080px;
-	height: 1080px;
+	overflow: hidden;
 }
-
-
 
 #mainImageContainer {
 	border: 1px;
@@ -26,11 +24,12 @@ canvas {
 	position: relative;
 	width: 1080px;
 	height: 1080px;
-	
+	overflow: hidden;
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	background-position: center center; 
 	float: left;
+
 }
 
 

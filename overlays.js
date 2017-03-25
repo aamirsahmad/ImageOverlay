@@ -9,7 +9,7 @@ var filter2Overlay = 'filter2.png';
 
 
 //Add overlays to array
-var overlays = [barOverlay, cloudOverlay, filter1Overlay, filter2Overlay ];
+var overlays = [filter1Overlay, filter2Overlay, barOverlay, cloudOverlay ];
 var position = 0;
 
 //Go to the previous image overlay
