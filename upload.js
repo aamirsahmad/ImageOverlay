@@ -33,10 +33,10 @@ function previewFile() {
 
     //*ORIENTATION FIXING*//
     //Should be consolidated into seperate function
-
+    console.log("Orientation Number:" + OrientationNumber);
     //ROTATE 90 DEGREES CW
     if(OrientationNumber == 6){ 
-
+      console.log("Rotating");
       //Create the canvas for changing orientation
       //var oCanvas = document.getElementById("testCanvas"); //Use this for testing locally
       var oCanvas = document.createElement("canvas");
