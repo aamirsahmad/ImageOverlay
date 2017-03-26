@@ -48,8 +48,8 @@ function previewFile() {
 
       var oContext = oCanvas.getContext("2d");
      
-      oContext.rotate(0.5 * Math.PI); //Rotate Canvas 90 Degrees
-      oContext.translate(0, -oCanvas.width); //Move back into position
+      //oContext.rotate(0.5 * Math.PI); //Rotate Canvas 90 Degrees
+      //oContext.translate(0, -oCanvas.width); //Move back into position
       oContext.drawImage(savedImage, 0 ,0); //Update Canvas
 
       //Overwrite save image with the rotated image
