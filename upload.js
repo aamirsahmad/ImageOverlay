@@ -1,5 +1,5 @@
 var OrientationNumber;
-
+ document.getElementById("versionNumber").innerHTML = ("Version 2"); 
 function previewFile() {
   //Taken from:
 	//https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL
