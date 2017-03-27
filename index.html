@@ -25,12 +25,13 @@
 
 		<div class="buttonContainer">
 
-			<input type="file"   class="button" id="uploadButton" onchange="previewFile()"> 
+			<div>
+			<input type="file"   class="button" id="uploadButton" onchange="previewFile()">
+			<div> 
 			
-			<div class="leftrightContainer">
-				<div class="button" id="filterButton" onclick="nextImage()"><p> PICK FILTER </p> </div>
-				<div class="button" id="rotateButton" onclick="rotateImage()"><p> ROTATE </p> </div>
-			</div>
+			<div class="button" id="rotateButton" onclick="rotateImage()"><p> ROTATE </p> </div>
+			<div class="button" id="filterButton" onclick="nextImage()"><p> PICK FILTER </p> </div>						
+			
 			<div class="button" id="saveButton" download="image.png" id="saveLink" onclick="createCanvas()">
 				<p>SAVE IMAGE</p>
 			</div>
