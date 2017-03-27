@@ -93,7 +93,7 @@ p {
     font-size: 18px;
 }
 
-#leftButton, #rightButton {
+#leftButton, #rightButton, #rotateButton {
 	border-color: #326E99;
     background-color: #3F8ABF;
 
