@@ -10,38 +10,43 @@ p {
 	font-size: 25px;
 }
 
-
-
-
-.wrapperContainer {
-	position: relative;
-	overflow: hidden;
-}
-
-#mainImageContainer {
-	border: 1px;
+canvas {
+	border: 5px #3F3F3F;
 	border-style: solid;
 	position: relative;
 	width: 1080px;
 	height: 1080px;
-	overflow: hidden;
+}
+
+#mainTitleContainer {
+	margin: 0px auto;
+}
+
+#title {
+	font-family: "avenir";
+	font-size: 42px;
+	font-weight: 500;
+	
+}
+
+#mainImageContainer {
+	border: 5px #3F3F3F;
+	border-style: solid;
+	position: relative;
+	width: 1080px;
+	height: 1080px;
+	
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
 	background-position: center center; 
-	float: left;
 
 }
 
 
-
 .buttonContainer {
-	border-color: rgb(0,0,255); 
-	border: 1px;
-	border-style: solid;
 	display: flex-inline;
 	position: relative;
-	float: left;
-
+	width: 1080px;
 }
 
 .button {
@@ -60,58 +65,76 @@ p {
     text-overflow: ellipsis;
     transition: all 200ms ease-in-out 0s;
     font-weight: 700;	
-    padding: 10px 40px 18px 10px;
     font-size: 18px;
-
 }
 
 #uploadButton {
-	border-color: #326E99;
-    background-color: #3F8ABF;
+	border-color: #004C98;
+    background-color: #004C98;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	float: left;
+	margin-bottom: 5px;
+	width: 535px
 }
-#uploadButton:hover, #uploadButton:focus, #uploadButton:active,
-#leftButton:hover, #leftButton:focus, #leftButton:active,
-#rightButton:hover, #rightButton:focus, #rightButton:active{
-    background-color: #5058AD;
-    border-color: #3D4387;  
+#uploadButton:hover, #uploadButton:focus, #uploadButton:active {
+	background-color: #006CD7;
 }
+
+#filterButton {
+	border-color: #2F8E8D;
+    background-color: #339999;
+	width: 535px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 5px;
+	float: right;
+
+}
+
+#filterButton:hover, #filterButton:focus, #filterButton:active{
+    background-color: #46D4D2;
+}
+
+#rotateButton {
+	border-color: #C24984;
+    background-color: #993366;
+	width: 535px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 4px;
+	float: left;
+}
+
 #saveButton {
-	width: 340px;
-	height: 60px;
-	border-color: #3AC162;
-	background-color: #5FCF80;
+	width: 535px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-color: #EABC09;
+	background-color: #FFCC00;
+	float: right;
 }
+
 #saveButton:hover, #saveButton:focus, #saveButton:active {
-    background-color: #50AD6B;
-    border-color: #3AC162;  
+    background-color: #FFE47F;
 }
 
-#saveLink {
-	font-family: 'Roboto';
-	font-weight: 700;	
-    padding: 10px 40px 18px 10px;
-    font-size: 18px;
-}
 
-#leftButton, #rightButton, #rotateButton {
-	border-color: #326E99;
-    background-color: #3F8ABF;
-
-}
 
 .sliderContainer {
-	padding: 25px 10px 0px 10px;
+	padding: 20px 10px 0px 10px;
 	text-align: center;
 }
 
 #slider {
-	width: 100%;
+	padding-top: 40px;
+	width: 90%;
 }
 
 #overlayImage {
 	position: absolute;
 	left: 0px;
 	bottom: 0px;
+	width: 100%;
 
 }
-
