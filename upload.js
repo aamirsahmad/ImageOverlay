@@ -40,8 +40,8 @@ function previewFile() {
     if(OrientationNumber == 6){ 
       console.log("Rotating");
       //Create the canvas for changing orientation
-      var oCanvas = document.getElementById("testCanvas"); //Use this for testing locally
-      //var oCanvas = document.createElement("canvas");
+      //var oCanvas = document.getElementById("testCanvas"); //Use this for testing locally
+      var oCanvas = document.createElement("canvas");
 
       oCanvas.width = imageHeight;
       oCanvas.height = imageWidth;
