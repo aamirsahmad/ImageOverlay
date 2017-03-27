@@ -19,7 +19,7 @@ canvas {
 }
 
 #mainTitleContainer {
-	margin: 0px auto;
+	
 }
 
 #title {
@@ -73,10 +73,11 @@ canvas {
     background-color: #004C98;
 	padding-top: 60px;
 	padding-bottom: 60px;
-	float: left;
 	margin-bottom: 5px;
-	width: 535px
+	width: 535px;
+	float: left;
 }
+
 #uploadButton:hover, #uploadButton:focus, #uploadButton:active {
 	background-color: #006CD7;
 }
@@ -103,7 +104,11 @@ canvas {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	margin-bottom: 4px;
-	float: left;
+	float: right;
+}
+
+#rotateButton:hover, #rotateButton:focus, #rotateButton:active{
+	background-color: #C5518B;
 }
 
 #saveButton {
@@ -112,7 +117,7 @@ canvas {
 	padding-bottom: 30px;
 	border-color: #EABC09;
 	background-color: #FFCC00;
-	float: right;
+	float: left;
 }
 
 #saveButton:hover, #saveButton:focus, #saveButton:active {
