@@ -124,6 +124,11 @@ canvas {
     background-color: #FFE47F;
 }
 
+#saveLink {
+	font-family: 'Roboto';
+	color: #FFFFFF;
+	text-decoration: none;
+}
 
 
 .sliderContainer {
